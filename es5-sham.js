@@ -36,7 +36,7 @@ if (!Function.prototype.bind) {
             e = this,
             c = function() {},
             d = function() {
-                return e.apply(this instanceof c ? this : b || window, f.concat(a.call(arguments)));
+                return e.apply(this instanceof function() {} ? this : b || window, f.concat(a.call(arguments)));
             };
         c.prototype = this.prototype;
         d.prototype = new c();
